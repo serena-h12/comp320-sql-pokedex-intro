@@ -1,0 +1,2 @@
+select pokemon.identifier, count(*) from pokemon join pokemon_types on pokemon.id = pokemon_types.pokemon_id 
+join types on pokemon_types.type_id = types.id group by pokemon.id order by pokemon.identifier;
